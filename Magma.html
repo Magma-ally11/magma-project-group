@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Magma Project Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('Magma Project.png'); /* Replace with actual image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Glitch Effect */
+        @keyframes glitch {
+            0% { background-position: center; }
+            25% { background-position: left 10px; }
+            50% { background-position: right 10px; }
+            75% { background-position: left 5px; }
+            100% { background-position: center; }
+        }
+        body {
+            animation: glitch 3s infinite alternate ease-in-out;
+        }
+
+        /* Cool Team Name */
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-shadow: 0px 0px 25px rgba(0, 162, 255, 1);
+            font-family: "Orbitron", sans-serif;
+            animation: glowEffect 1.5s infinite alternate ease-in-out;
+        }
+
+        /* Glowing Animation */
+        @keyframes glowEffect {
+            0% { text-shadow: 0px 0px 15px rgba(0, 162, 255, 0.8); }
+            100% { text-shadow: 0px 0px 35px rgba(0, 162, 255, 1); }
+        }
+
+        /* Welcome Popup Box */
+        .welcome-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+            font-size: 2em;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* Scrollable Team Info */
+        .about-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 10px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: scroll;
+            font-size: 1.2em;
+        }
+
+        /* Team Section - Moving Carousel */
+        .team-section {
+            margin-top: 50px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            animation: moveLeft 10s infinite linear;
+        }
+        @keyframes moveLeft {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+        .member p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fbc02d;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-popup" id="welcomeBox">
+        Welcome to the Introductory Page of **The Magma Project Group**!
+    </div>
+
+    <header>The Magma Project Group</header>
+
+    <div class="about-container">
+        <h2>About The Magma Project Group</h2>
+        <p>
+            The **Magma Project Group** is a powerhouse of **creativity and innovation**, bringing together visionary minds with a passion for transformation.
+            Our goal is to create groundbreaking ideas that reshape perspectives, elevate creativity, and build projects with lasting impact.
+        </p>
+        <p>
+            Every member of Magma contributes their expertise in different fields, whether it's technology, design, storytelling, or entrepreneurship. 
+            Through collaboration and shared vision, we craft solutions that go beyond imagination.
+        </p>
+        <p>
+            With an ever-evolving approach and a commitment to excellence, Magma isn't just a team—it's a movement toward innovation. 
+            Join us in redefining the future. 🚀🔥
+        </p>
+    </div>
+
+    <div class="team-section">
+        <div class="member">
+            <img src="Dipan Pandeya.jpg" alt="Dipan Pandeya">
+            <p>Dipan Pandeya</p>
+        </div>
+        <div class="member">
+            <img src="Nakul Giri.jpeg" alt="Nakul Giri">
+            <p>Nakul Giri</p>
+        </div>
+        <div class="member">
+            <img src="Krish Paudel.jpeg" alt="Krish Paudel">
+            <p>Krish Paudel</p>
+        </div>
+        <div class="member">
+            <img src="Krish Sharma.jpeg" alt="Krish Sharma">
+            <p>Krish Sharma</p>
+        </div>
+        <div class="member">
+            <img src="Muskan Magar.jpeg" alt="Muskan Thapa Magar">
+            <p>Muskan Thapa Magar</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 The Magma Project Group | **Igniting Creativity & Innovation**  
+    </footer>
+
+    <script>
+        // Show Welcome Popup on Load
+        window.onload = function() {
+            let welcomeBox = document.getElementById("welcomeBox");
+            welcomeBox.style.display = "block";
+
+            setTimeout(() => {
+                welcomeBox.style.display = "none";
+            }, 3000); // Disappears after 3 seconds
+        };
+    </script>
+
+</body>
+</html>
